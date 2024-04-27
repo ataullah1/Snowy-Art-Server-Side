@@ -27,6 +27,9 @@ async function run() {
     const snowyArtCollection = client
       .db('snowyArtDB')
       .collection('art-and-craft');
+    const snowyArCategoriestCollection = client
+      .db('snowyArtDB')
+      .collection('art-and-craft-categories');
 
     // Art And Craft Item Post Method
     app.post('/add-art-craft-items', async (req, res) => {
@@ -52,6 +55,12 @@ async function run() {
     // Art and Craft Item Read method
     app.get('/all-art-craft-items', async (req, res) => {
       const cursor = snowyArtCollection.find();
+      const result = await cursor.toArray();
+      res.send(result);
+    });
+    // Art and Craft Item Categories Read method
+    app.get('/all-art-craft-items-categories', async (req, res) => {
+      const cursor = snowyArCategoriestCollection.find();
       const result = await cursor.toArray();
       res.send(result);
     });
