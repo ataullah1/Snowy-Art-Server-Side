@@ -59,7 +59,7 @@ async function run() {
       res.send(result);
     });
     // Art and Craft Item Categories Read method
-    app.get('/all-art-craft-items-categories', async (req, res) => {
+    app.get('/art-craft-items-categories', async (req, res) => {
       const cursor = snowyArCategoriestCollection.find();
       const result = await cursor.toArray();
       res.send(result);
