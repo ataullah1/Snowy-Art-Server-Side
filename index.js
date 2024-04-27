@@ -24,15 +24,33 @@ async function run() {
   try {
     // Connect the client to the server	(optional starting in v4.7)
     // await client.connect();
+    const snowyArtCollection = client
+      .db('snowyArtDB')
+      .collection('art-and-craft');
 
     // Art And Craft Item Post Method
-    app.post('art-craft-items', async (req, res) => {
+    app.post('/add-art-craft-items', async (req, res) => {
       const newItem = req.body;
       console.log(newItem);
+      // Create a document to insert
+      const doc = {
+        itemName: newItem.itemName,
+        category: newItem.category,
+        processing_time: newItem.processing_time,
+        customization: newItem.customization,
+        stockStatus: newItem.stockStatus,
+        rating: newItem.rating,
+        price: newItem.price,
+        photo: newItem.photo,
+        description: newItem.description,
+      };
+      // Insert the defined document into the "haiku" collection
+      const result = await snowyArtCollection.insertOne(doc);
+      res.send(result);
     });
 
     // Art and Craft Item Read method
-    app.get('/art-craft-items', (req, res) => {
+    app.get('/all-art-craft-items', (req, res) => {
       res.send('art-craft-items data reading');
     });
 
@@ -43,7 +61,7 @@ async function run() {
     );
   } finally {
     // Ensures that the client will close when you finish/error
-    await client.close();
+    // await client.close();
   }
 }
 run().catch(console.dir);
