@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { MongoClient, ServerApiVersion } = require('mongodb');
+const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 require('dotenv').config();
 const app = express();
 const port = process.env.PORT || 3000;
@@ -53,23 +53,33 @@ async function run() {
     });
 
     // Card Update Method
-    app.put('/item-update/:id', async (req, res) => {
+    app.put('/item-updates/:id', async (req, res) => {
+      const newItem = req.body;
       const id = req.params.id;
-      const query = { _id: new ObjectId(id) };
-      console.log(query);
+      const filter = { _id: new ObjectId(id) };
+      // console.log(query);
       const options = { upsert: true };
       // Create a document to insert
-      const doc = {
-        itemName: newItem.itemName,
-        category: newItem.category,
-        processing_time: newItem.processing_time,
-        customization: newItem.customization,
-        stockStatus: newItem.stockStatus,
-        rating: newItem.rating,
-        price: newItem.price,
-        photo: newItem.photo,
-        description: newItem.description,
+      const updateDoc = {
+        $set: {
+          itemName: newItem.itemName,
+          category: newItem.category,
+          processing_time: newItem.processing_time,
+          customization: newItem.customization,
+          stockStatus: newItem.stockStatus,
+          rating: newItem.rating,
+          price: newItem.price,
+          photo: newItem.photo,
+          description: newItem.description,
+          userName: newItem.userName,
+        },
       };
+      const result = await snowyArtCollection.updateOne(
+        filter,
+        updateDoc,
+        options
+      );
+      res.send(result);
     });
 
     // Send a ping to confirm a successful connection
