@@ -82,6 +82,15 @@ async function run() {
       res.send(result);
     });
 
+    // Item Delete Method
+    app.delete('/item-deletes/:id', async (req, res) => {
+      const id = req.params.id;
+      const filterId = { _id: new ObjectId(id) };
+      console.log(filterId);
+      const result = await snowyArtCollection.deleteOne(filterId);
+      res.send(result);
+    });
+
     // Send a ping to confirm a successful connection
     await client.db('admin').command({ ping: 1 });
     console.log(
