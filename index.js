@@ -35,19 +35,6 @@ async function run() {
     app.post('/add-art-craft-items', async (req, res) => {
       const newItem = req.body;
       console.log(newItem);
-      // Create a document to insert
-      // const doc = {
-      //   itemName: newItem.itemName,
-      //   category: newItem.category,
-      //   processing_time: newItem.processing_time,
-      //   customization: newItem.customization,
-      //   stockStatus: newItem.stockStatus,
-      //   rating: newItem.rating,
-      //   price: newItem.price,
-      //   photo: newItem.photo,
-      //   description: newItem.description,
-      // };
-      // Insert the defined document into the "haiku" collection
       const result = await snowyArtCollection.insertOne(newItem);
       res.send(result);
     });
@@ -63,6 +50,26 @@ async function run() {
       const cursor = snowyArCategoriestCollection.find();
       const result = await cursor.toArray();
       res.send(result);
+    });
+
+    // Card Update Method
+    app.put('/item-update/:id', async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: new ObjectId(id) };
+      console.log(query);
+      const options = { upsert: true };
+      // Create a document to insert
+      const doc = {
+        itemName: newItem.itemName,
+        category: newItem.category,
+        processing_time: newItem.processing_time,
+        customization: newItem.customization,
+        stockStatus: newItem.stockStatus,
+        rating: newItem.rating,
+        price: newItem.price,
+        photo: newItem.photo,
+        description: newItem.description,
+      };
     });
 
     // Send a ping to confirm a successful connection
