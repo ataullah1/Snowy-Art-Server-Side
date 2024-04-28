@@ -38,3 +38,5 @@ SnowyArt Backend is the server-side component of the SnowyArt project, an online
 
 2. **Art&Craft Category API**: Offers details of different categories available on the website.
    - [Category API Documentation](link_to_category_api): Detailed documentation for the Category API.
+
+## You can access the live side version of SnowyArt [here](https://snowy-art.web.app/).
