@@ -34,16 +34,16 @@ SnowyArt Backend is the server-side component of the SnowyArt project, an online
 
 1. **Art&Craft Cards API**: Provides details of all the cards available on the website, including art and craft items.
 
-   - [Cards API Documentation](link_to_cards_api): Detailed documentation for the Cards API.
+   - [Cards API Documentation](https://snowy-art-server-side.vercel.app/all-art-craft-items): Detailed documentation for the Cards API.
 
 2. **Art&Craft Category API**: Offers details of different categories available on the website.
-   - [Category API Documentation](link_to_category_api): Detailed documentation for the Category API.
+   - [Category API Documentation](https://snowy-art-server-side.vercel.app/art-craft-items-categories): Detailed documentation for the Category API.
 
 - ### You can access the live side version of SnowyArt [here link](https://snowy-art.web.app/).
 
 ## Feedback and Contributions
 
-Feedback and contributions are welcome! If you encounter any issues or have suggestions for improvement, please [open an issue](https://github.com/programming-hero-web-course-4/b9a9-real-estate-ataullah1/issues) or submit a pull request.
+Feedback and contributions are welcome! If you encounter any issues or have suggestions for improvement, please [open an issue](https://github.com/programming-hero-web-course-4/b9a10-server-side-ataullah1/issues) or submit a pull request.
 
 ## Contact me
 
