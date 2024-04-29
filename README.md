@@ -39,4 +39,22 @@ SnowyArt Backend is the server-side component of the SnowyArt project, an online
 2. **Art&Craft Category API**: Offers details of different categories available on the website.
    - [Category API Documentation](link_to_category_api): Detailed documentation for the Category API.
 
-## You can access the live side version of SnowyArt [here](https://snowy-art.web.app/).
+- ### You can access the live side version of SnowyArt [here link](https://snowy-art.web.app/).
+
+## Feedback and Contributions
+
+Feedback and contributions are welcome! If you encounter any issues or have suggestions for improvement, please [open an issue](https://github.com/programming-hero-web-course-4/b9a9-real-estate-ataullah1/issues) or submit a pull request.
+
+## Contact me
+
+### Follow on GitHub
+
+[Link to GitHub Profile](https://github.com/ataullah1)
+
+### Follow on Facebook
+
+[Link to Facebook Profile](https://www.facebook.com/ataullah0)
+
+### Follow on Twitter
+
+[Link to Twitter Profile](https://twitter.com/dev_ataullah)
