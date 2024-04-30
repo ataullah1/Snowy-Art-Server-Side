@@ -1,5 +1,8 @@
 # Snowy Art Backend
 
+You can access the Server side version of SnowyArt [here](https://github.com/programming-hero-web-course-4/b9a10-server-side-ataullah1).
+You can access the live side version of SnowyArt [here](https://snowy-art.web.app/). <br>
+
 ## Description
 
 SnowyArt Backend is the server-side component of the SnowyArt project, an online platform for showcasing and selling various art paintings and craft items. This backend is built using Express.js and MongoDB, with authentication provided by Firebase.
