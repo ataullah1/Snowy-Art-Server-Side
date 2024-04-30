@@ -40,11 +40,24 @@ async function run() {
     });
 
     // Art and Craft Item Read method
+    // app.get('/all-art-craft-items', async (req, res) => {
+    //   const cursor = snowyArtCollection.find();
+    //   const result = await cursor.toArray();
+    //   res.send(result);
+    // });
     app.get('/all-art-craft-items', async (req, res) => {
-      const cursor = snowyArtCollection.find();
-      const result = await cursor.toArray();
-      res.send(result);
+      const email = req.query.email;
+      if (email) {
+        const result = await snowyArtCollection
+          .find({ email: email })
+          .toArray();
+        res.send(result);
+      } else {
+        const result = await snowyArtCollection.find().toArray();
+        res.send(result);
+      }
     });
+
     // Art and Craft Item Categories Read method
     app.get('/art-craft-items-categories', async (req, res) => {
       const cursor = snowyArCategoriestCollection.find();
