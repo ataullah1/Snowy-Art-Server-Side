@@ -1,7 +1,7 @@
 # Snowy Art Backend
 
-You can access the Server-side version of SnowyArt [here](https://github.com/programming-hero-web-course-4/b9a10-server-side-ataullah1). <br>
-You can access the live-side version of SnowyArt [here](https://snowy-art.web.app/). 
+You can access the Server-side version of SnowyArt [here](https://github.com/ataullah1/Snowy-Art-Client-Side). <br>
+You can access the live-side version of SnowyArt [here](https://snowy-art.web.app/).
 
 ## Description
 
@@ -46,7 +46,7 @@ SnowyArt Backend is the server-side component of the SnowyArt project, an online
 
 ## Feedback and Contributions
 
-Feedback and contributions are welcome! If you encounter any issues or have suggestions for improvement, please [open an issue](https://github.com/programming-hero-web-course-4/b9a10-server-side-ataullah1/issues) or submit a pull request.
+Feedback and contributions are welcome! If you encounter any issues or have suggestions for improvement, please [open an issue](https://github.com/ataullah1/Snowy-Art-Server-Side/issues) or submit a pull request.
 
 ## Contact me
 
