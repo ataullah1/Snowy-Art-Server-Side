@@ -44,6 +44,26 @@ SnowyArt Backend is the server-side component of the SnowyArt project, an online
 
 - ### You can access the live side version of SnowyArt [here link](https://snowy-art.web.app/).
 
+To install and run SnowyArt-Server locally, follow these steps:
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/ataullah1/Snowy-Art-Server-Side.git
+   ```
+
+2. Navigate into the project directory:
+
+   ```
+   cd Snowy-Art-Server-Side
+   ```
+
+3. Install dependencies using npm:
+
+   ```
+   npm install
+   ```
+
 ## Feedback and Contributions
 
 Feedback and contributions are welcome! If you encounter any issues or have suggestions for improvement, please [open an issue](https://github.com/ataullah1/Snowy-Art-Server-Side/issues) or submit a pull request.
